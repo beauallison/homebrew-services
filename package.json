@@ -1,0 +1,32 @@
+{
+  "name": "homebrew-services",
+  "version": "0.0.1",
+  "description": "Control Homebrew services from OSX",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beauallison/homebrew-services.git"
+  },
+  "keywords": [
+    "Homebrew",
+    "brew",
+    "OSX",
+    "services"
+  ],
+  "author": "Beau Allison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beauallison/homebrew-services/issues"
+  },
+  "homepage": "https://github.com/beauallison/homebrew-services#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint": "^4.18.2",
+    "jest": "^22.4.2"
+  }
+}
