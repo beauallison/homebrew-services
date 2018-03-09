@@ -1,0 +1,11 @@
+Name          Status  User        Plist
+cassandra     stopped
+chronograf    stopped
+elasticsearch stopped
+influxdb      stopped
+kafka         stopped
+kapacitor     stopped
+mongodb       stopped
+rabbitmq      stopped
+redis         started osx /Users/osx/Library/LaunchAgents/homebrew.mxcl.redis.plist
+zookeeper     stopped
