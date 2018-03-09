@@ -9,18 +9,10 @@ const readFixtures = (filename) => {
 const fixtures = ['list'].reduce((acc, key) =>
   acc.set(key, readFixtures(key)), new Map());
 
-const newReadable = (data) => {
-  const rs = new Readable();
-
-  // eslint-disable-next-line no-underscore-dangle
-  rs._read = () => {
-    if (data) {
-      rs.emit('data', data);
-      rs.emit('close');
-    }
-  };
-  return rs;
-};
+const newReadable = data =>
+  Readable({
+    read() { if (data) this.emit('data', data); this.emit('close'); },
+  });
 
 module.exports = {
   spawn: (brew, args) => {
