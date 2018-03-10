@@ -2,7 +2,7 @@ const { Readable } = require('stream');
 const fs = require('fs');
 
 const readFixtures = (filename) => {
-  const path = `${__dirname}/fixtures/${filename}.txt`;
+  const path = `./fixtures/${filename}.txt`;
   return fs.readFileSync(path, 'utf8');
 };
 

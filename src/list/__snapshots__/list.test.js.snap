@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list() should return a Map of services and their status 1`] = `
+Map {
+  "cassandra" => "stopped",
+  "chronograf" => "stopped",
+  "elasticsearch" => "stopped",
+  "influxdb" => "stopped",
+  "kafka" => "stopped",
+  "kapacitor" => "stopped",
+  "mongodb" => "stopped",
+  "rabbitmq" => "stopped",
+  "redis" => "started",
+  "zookeeper" => "stopped",
+}
+`;

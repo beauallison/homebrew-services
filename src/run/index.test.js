@@ -1,6 +1,6 @@
 jest.mock('child_process');
 
-const run = require('./run');
+const run = require('./');
 
 describe('run()', () => {
   it('should run a command', async () => {
