@@ -2,7 +2,7 @@ const fs = require('fs');
 const mappings = require('./mappings');
 
 const readFixtures = (filename) => {
-  const path = `${__dirname}/${filename}.txt`;
+  const path = `${__dirname}/files/${filename}.txt`;
   return fs.readFileSync(path, 'utf8');
 };
 
