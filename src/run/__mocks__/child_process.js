@@ -1,13 +1,5 @@
 const { Readable } = require('stream');
-const fs = require('fs');
-
-const readFixtures = (filename) => {
-  const path = `./fixtures/${filename}.txt`;
-  return fs.readFileSync(path, 'utf8');
-};
-
-const fixtures = ['list'].reduce((acc, key) =>
-  acc.set(key, readFixtures(key)), new Map());
+const fixtures = require('../../../fixtures');
 
 const newReadable = data =>
   Readable({
