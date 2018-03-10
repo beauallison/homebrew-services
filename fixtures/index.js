@@ -5,5 +5,5 @@ const readFixtures = (filename) => {
   return fs.readFileSync(path, 'utf8');
 };
 
-module.exports = ['list'].reduce((acc, key) =>
+module.exports = ['list', 'start'].reduce((acc, key) =>
   acc.set(key, readFixtures(key)), new Map());

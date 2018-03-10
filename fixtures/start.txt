@@ -1,0 +1,1 @@
+==> Successfully started `redis` (label: homebrew.mxcl.redis)​​​​​
