@@ -1,6 +1,6 @@
 jest.mock('child_process');
 
-const list = require('./list');
+const list = require('./');
 
 describe('list()', () =>
   it('should return a Map of services and their status', async () => {
