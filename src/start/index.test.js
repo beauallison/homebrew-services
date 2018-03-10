@@ -7,4 +7,9 @@ describe('start()', () => {
     const { status } = await start('redis');
     expect(status).toEqual('redis started');
   });
+
+  it('should return status for already started service', async () => {
+    const { status } = await start('kafka');
+    expect(status).toEqual('kafka already started');
+  });
 });

@@ -9,7 +9,7 @@ const newReadable = data =>
 module.exports = {
   spawn: (brew, args) => {
     const command = args[1];
-    const data = fixtures.get(command);
+    const data = fixtures.get(args.join(' '));
 
     return ({
       stderr: newReadable(command === 'error' ? data : undefined),

@@ -5,5 +5,7 @@ const readFixtures = (filename) => {
   return fs.readFileSync(path, 'utf8');
 };
 
-module.exports = ['list', 'start'].reduce((acc, key) =>
-  acc.set(key, readFixtures(key)), new Map());
+const fixtures = ['list', 'start_redis', 'start_kafka'];
+
+module.exports = fixtures.reduce((acc, key) =>
+  acc.set(`services ${key.replace('_', ' ')}`, readFixtures(key)), new Map());
