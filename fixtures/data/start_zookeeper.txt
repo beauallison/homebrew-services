@@ -1,1 +1,1 @@
-Error starting Zookeeper
+Error: Service `zookeeper` failed to start.
