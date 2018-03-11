@@ -15,5 +15,14 @@
     "key": "start_zookeeper",
     "command": "services start zookeeper",
     "isError": true
+  },
+  {
+    "key": "stop_redis",
+    "command": "services stop redis"
+  },
+  {
+    "key": "stop_zookeeper",
+    "command": "services stop zookeeper",
+    "isError": true
   }
 ]
