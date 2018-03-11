@@ -1,0 +1,28 @@
+[
+  {
+    "key": "list",
+    "command": "services list"
+  },
+  {
+    "key": "start_redis",
+    "command": "services start redis"
+  },
+  {
+    "key": "start_kafka",
+    "command": "services start kafka"
+  },
+  {
+    "key": "start_zookeeper",
+    "command": "services start zookeeper",
+    "isError": true
+  },
+  {
+    "key": "stop_redis",
+    "command": "services stop redis"
+  },
+  {
+    "key": "stop_zookeeper",
+    "command": "services stop zookeeper",
+    "isError": true
+  }
+]
