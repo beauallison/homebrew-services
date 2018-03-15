@@ -13,6 +13,9 @@ describe('start()', () => {
     expect(status).toEqual('already started');
   });
 
-  it('should return an error for incorrect service', async () =>
+  it('should return an error for incorrect service', () =>
     expect(start({ service: 'zookeeper' })).rejects.toThrowError(/Failed to start zookeeper/));
+
+  it('should return an error for missing input parameters', () =>
+    expect(start()).rejects.toThrowError(/Missing input parameter: service/));
 });
