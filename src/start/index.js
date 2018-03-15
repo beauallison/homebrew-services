@@ -1,10 +1,11 @@
 const run = require('../run');
 
-module.exports = async (service) => {
+module.exports = async ({ service } = {}) => {
+  if (!service) throw new Error('Missing input parameter: service');
   try {
     const output = await run(['start', service]);
-    const alreadyStarted = output.match('already') ? ' already' : '';
-    return { status: `${service}${alreadyStarted} started` };
+    const status = output.match('already') ? 'already started' : 'started';
+    return { status };
   } catch (err) {
     throw new Error(`Failed to start ${service}`);
   }

@@ -1,3 +1,5 @@
+const EventEmitter = require('events');
+
 const { Readable } = require('stream');
 const fixtures = require('../../../fixtures');
 
@@ -8,11 +10,14 @@ const newReadable = data =>
 
 module.exports = {
   spawn: (brew, args) => {
-    const { data, isError } = fixtures[args.join(' ')];
+    const child = new EventEmitter();
 
-    return ({
-      stderr: newReadable(isError ? data : undefined),
-      stdout: newReadable(!isError ? data : undefined),
-    });
+    const { data, isError } = fixtures[args.join(' ')];
+    child.stderr = newReadable(isError ? data : undefined);
+    child.stdout = newReadable(!isError ? data : undefined);
+
+    child.stderr.on('close', () => child.emit('close'));
+    child.stdout.on('close', () => child.emit('close'));
+    return child;
   },
 };

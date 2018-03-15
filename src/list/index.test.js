@@ -4,6 +4,6 @@ const list = require('./');
 
 describe('list()', () =>
   it('should return a Map of services and their status', async () => {
-    const output = await list();
-    expect(output).toMatchSnapshot();
+    const { services } = await list();
+    expect(services).toMatchSnapshot();
   }));

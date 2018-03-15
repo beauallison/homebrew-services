@@ -3,5 +3,5 @@ const { convertToMap } = require('./utils');
 
 module.exports = async () => {
   const output = await run(['list']);
-  return convertToMap(output);
+  return { services: convertToMap(output) };
 };
