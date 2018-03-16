@@ -1,6 +1,6 @@
 {
   "name": "homebrew-services",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Control Homebrew services from OSX",
   "main": "index.js",
   "scripts": {

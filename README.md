@@ -1,5 +1,7 @@
 # Homebrew Services
 
+![Build Status][badgeBuild] ![Coverage Status][badgeCov]
+
 Promised based wrapper to control [brew](https://brew.sh/) services on macOS from Node.js
 
 ## Requirements
@@ -45,3 +47,7 @@ console.log(status); // started
 const { status } = await brew.stop({ service: 'redis' });
 console.log(status); // stopped
 ```
+
+<!-- Links -->
+[badgeBuild]: https://travis-ci.org/beauallison/homebrew-services.svg?branch=master
+[badgeCov]: https://coveralls.io/repos/github/beauallison/homebrew-services/badge.svg?branch=master
