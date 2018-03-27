@@ -24,5 +24,14 @@
     "key": "stop_zookeeper",
     "command": "services stop zookeeper",
     "isError": true
+  },
+  {
+    "key": "restart_redis",
+    "command": "services restart redis"
+  },
+  {
+    "key": "restart_zookeeper",
+    "command": "services restart zookeeper",
+    "isError": true
   }
 ]

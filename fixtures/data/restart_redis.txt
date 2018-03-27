@@ -1,0 +1,3 @@
+Stopping `redis`... (might take a while)
+==> Successfully stopped `redis` (label: homebrew.mxcl.redis)
+==> Successfully started `redis` (label: homebrew.mxcl.redis)
