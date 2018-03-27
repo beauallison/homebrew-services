@@ -1,0 +1,3 @@
+Stopping `zookeeper`... (might take a while)
+==> Successfully stopped `zookeeper` (label: homebrew.mxcl.zookeeper)
+Error: Service `zookeeper` failed to start.
